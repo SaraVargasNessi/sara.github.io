@@ -1,0 +1,129 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homepage</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        * {
+    scroll-behavior: smooth;
+    
+    /* LAYOUT */
+
+    }
+    .container {
+        margin: auto;
+        width: 80vw;
+        padding: 20px;
+    }
+
+    .column {
+        float: left;
+         width: 50%;
+        width: ;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .sticky {
+    top: 0;
+    width: 100%;
+    position: sticky;
+    background-color: white;
+    filter: drop-shadow(2px 2px 20px pink);
+    }
+
+    .left {
+    float: left;
+    margin: 20px;
+    }
+
+    .right {
+    float: right;
+    }
+    
+
+    header {
+    }
+
+    /* IMAGES */
+
+    img {
+    width: 30%;
+    height: auto;
+    }
+
+    /* TYPOGRPAHY AND LINKS */
+
+    h1, h2, h3 {
+    margin-top: 3rem;
+    font-family: sans-serif;
+    letter-spacing: -0.1rem;
+    }
+
+    h1 {
+    font-size: 3rem;
+    }
+
+    h2 {
+    font-size: 2.5rem;
+    }
+
+    h3 {
+    font-size: 2rem;
+    }
+
+    p {
+    font-size: 0.875rem;
+    }
+
+    .parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+    nav a {
+    text-decoration: none;
+
+/* having some fun with the nav  */   
+    padding: 10px;
+    filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
+    font-family: sans-serif;
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    line-height: 3em;
+    /* this keeps nav word items together */
+    white-space: nowrap; 
+    }
+
+    a:link {
+    color: hotpink;
+    }
+
+    a:visited {
+    color: hotpink;
+    }
+
+    a:hover {
+    color: rgb(255, 255, 255);
+    transition: 2s;
+    }
+
+/*ficaption can be pretty neat. it's a default html tag to position captions under figures (images). accessibility: screen readers like images as figures. */
+    figcaption {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: slategrey;
+    text-transform: uppercase;
+    }
+
+
+</style>
+</head>     
+            
