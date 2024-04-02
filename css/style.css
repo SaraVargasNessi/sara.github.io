@@ -1,129 +1,442 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>homepage</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <style>
+
         * {
     scroll-behavior: smooth;
-    
-    /* LAYOUT */
 
     }
+
+    /* LAYOUT (from Chri's workshop with my adjustments)*/
+
     .container {
-        margin: auto;
-        width: 80vw;
-        padding: 20px;
-    }
+        margin: 0 auto;
+        width: 50vw;
+        padding: 0vw;
+        }
 
-    .column {
-        float: left;
-         width: 50%;
-        width: ;
-    }
+    .container.two {
+        display: grid;
+        position: left;
+        width: 10%;
+        display: flex;
+        align-items:center;
+        }
 
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+        #parentContainer {
+            top: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
-    .sticky {
-    top: 0;
-    width: 100%;
-    position: sticky;
-    background-color: white;
-    filter: drop-shadow(2px 2px 20px pink);
-    }
+        #childContainer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-self: center;
+            margin: auto;
+          }
 
-    .left {
-    float: left;
-    margin: 20px;
-    }
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+            
+        }
 
     .right {
-    float: right;
-    }
-    
-
-    header {
+        float: right
     }
 
-    /* IMAGES */
+    .centered {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 40%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        
+      }
 
-    img {
-    width: 30%;
-    height: auto;
+    /* .leftbottom {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 90%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        
+      }
+
+    .righttop {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 40%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        
+      }
+
+    .rightbottom {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 40%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+        
+      }*/
+
+   .centered:hover {
+        position: absolute;
+        color: rgb(0, 0, 0);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
+        transition: 0.2s;
+        text-decoration: none;
+      }
+      
+    .centered:visited {
+        position: absolute;
+        color: black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+      }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
-    /* TYPOGRPAHY AND LINKS */
+    .image {
+        position: relative;
+        opacity: 0.8;
+
+    }
+    .image:hover {
+        opacity: 1;
+        filter: drop-shadow(3px 3px 10px rgb(0, 0, 0));
+    }
+
+    .content {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: rgba (0,0,0,0,0.6);
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 1;
+        filter: drop-shadow(3px 3px 10px rgb(0, 0, 0));
+        transition: 0.2s;
+        text-decoration: none;
+    }
+
+    .content:hover {
+        opacity: 1;
+        filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
+        transition: 0.5s;
+    }
+
+    .content h1{
+        font-size: 50px;
+        margin-bottom: 15px;
+        filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+        color: white;
+        
+    }
+
+
+
+ /* TYPOGRPAHY AND LINKS (from Chri's workshop with my adjustments)
+
+ @font-face {
+    font-family: 'ChaumontScript-Regular'!important;
+    src: url('fonts/ChaumontScript-Regular.woff2') format('woff2'),
+         url('fonts/ChaumontScript-Regular.woff') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+    }*/
+
+
+    h5 {
+        font-family: "ChaumontScript-Regular";
+        margin-top: 0.5rem;
+        margin-bottom: -2.5rem;
+        }
 
     h1, h2, h3 {
-    margin-top: 3rem;
-    font-family: sans-serif;
-    letter-spacing: -0.1rem;
-    }
+        font-family: sans-serif;
+        letter-spacing: -0.1rem;
+        }
 
     h1 {
-    font-size: 3rem;
-    }
+        margin-top: 0.5rem;
+        margin-bottom: -2.5rem;
+        }
 
     h2 {
-    font-size: 2.5rem;
-    }
+        margin-top: 0rem;
+        font-size: 2.5rem;
+        }
 
     h3 {
-    font-size: 2rem;
-    }
+        margin-top: 0rem;
+        font-size: 2rem;
+        }
+
+    h4 {
+        margin-top: -1rem;
+        padding: 10px;
+        font-family: sans-serif;
+        letter-spacing: -0.05rem;
+        }
 
     p {
-    font-size: 0.875rem;
-    }
+        font-size: 0.875rem;
+        }
+
+/* BREAKPOINTS */
+
+    /* 0-800*/
+    @media (max-width: 800px) {
+
+        h1 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        
+        img {
+            width: 50vw;
+            padding: 10px;
+        }
+
+     
+        }
+
+        
+    /* 801* */
+    @media (min-width: 801px) {
+
+        h1 {
+            font-size: 3rem;
+        }
+        h4 {
+            font-size: 1.5rem;
+        }
+            
+        img {
+            width: 20vw;
+            padding: 10px;
+        }
+
+        } 
+            
+    
+/* IMAGES (from Chri's workshop with my adjustments)
+    img {
+        width: 30%;
+        height: auto;
+        }
+    
+    img.two {
+        width: 15%;
+        height: auto;
+        } 
+    
+    img.three {
+        width: 90%;
+        height: auto;
+        }
+
+/* Three image containers (from w3schools) (use 25% for four, and 50% for two, etc) */
+    .column {
+        float: left;
+        width: 50%;
+        max-width: 30%;
+        padding: 10%;
+        }
+
+    .columnmenu {
+        float: left;
+        width: auto;
+        padding: 1.5vw;
+        text-align: center;
+        }
+
+    .sticky {
+        top: 0;
+        width: 100%;
+        position: sticky;
+        background-color: white;
+        filter: drop-shadow(2px 2px 20px pink);
+        }
 
     .parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
 
+    div {
+        max-width: 800px;
+        min-width: 100px;
+        }
 
-    nav a {
-    text-decoration: none;
+/* SPACES (from w3schools) */
+    .br {
+        display: block; /* makes it have a width */
+        content: 90px; /* clears default height */
+        margin-top: 800px; /* change this to whatever height you want it */
+        }
 
-/* having some fun with the nav  */   
-    padding: 10px;
+    .break {
+        display: block; 
+        content: 90px; 
+        margin-top: 80px;
+        }
+
+    .break2 { 
+        display: block; 
+        content: 90px; 
+        margin-top: 200px; 
+        }
+
+    .break3 { /* large space */
+        display: block; 
+        content: 90px; 
+        margin-top: 2000px; 
+        }
+
+/* MENU STYLE 1 (from Chri's workshop with my adjustments)
+a:hover {
     filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
-    font-family: sans-serif;
-    background-color: rgb(0, 0, 0);
-    border: 0;
-    line-height: 3em;
-    /* this keeps nav word items together */
-    white-space: nowrap; 
-    }
-
-    a:link {
-    color: hotpink;
-    }
-
-    a:visited {
-    color: hotpink;
-    }
-
-    a:hover {
     color: rgb(255, 255, 255);
-    transition: 2s;
-    }
+    transition: 0.5s;
 
-/*ficaption can be pretty neat. it's a default html tag to position captions under figures (images). accessibility: screen readers like images as figures. */
+}
+
+a:visited {
+    filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+
+}*/
+    nav a.one {
+        text-decoration: none;
+        padding: 1%;
+        border-radius: 10px;
+        font-family: sans-serif;
+        background-color: rgb(0, 0, 0);
+        line-height: 2em;
+        /* this keeps nav word items together */
+        white-space: nowrap; 
+        }
+    
+    a.one:link {
+        color: rgb(255, 255, 255);
+        }
+
+    a.one:visited {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        }
+
+    a.one:hover {
+        filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
+        background-color:black;
+        color: rgb(255, 255, 255);
+        transition: 0.5s;
+        text-decoration: none;
+        }
+
     figcaption {
-    font-family: monospace;
-    font-size: 0.75rem;
-    color: slategrey;
-    text-transform: uppercase;
-    }
+        font-family: monospace;
+        font-size: 0.75rem;
+        color: slategrey;
+        text-transform: uppercase;
+        }
 
+    .figdescription {
+        font-family: sans-serif;
+        font-size: 0.75rem;
+        width: 80vw;
+        }
 
-</style>
-</head>     
-            
+/* LISTS */
+    ul {
+        list-style-type: none;
+        width: 100vw;
+        position: relative;
+        }
+
+/* FOOTER STYLE 2*/
+    nav a.two {
+        color: rgb(173, 137, 181);
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color:transparent;
+        font-family: sans-serif;
+        float: bottom;
+        line-height: 2em;
+        white-space: nowrap; 
+        }
+    
+    a.two:visited {
+        color: rgb(0, 0, 0);
+        }
+    
+    a.two:hover {
+        filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
+        background-color:rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: 1s;
+        }
+
+/* HOME LINK STYLE 3*/
+    a.three {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 10px;
+        background-color:rgba(255, 255, 255, 0);
+        font-family: sans-serif;
+        line-height: 3em;
+        white-space: nowrap; 
+        }
+        
+    a.three:visited {
+        color: rgb(0, 0, 0);
+        }
+        
+    a.three:hover {
+        filter: drop-shadow(2px 2px 20px rgb(0, 0, 0));
+        background-color:rgba(255, 255, 255, 0);
+        color: rgb(255, 255, 255);
+        transition: 0.5s;
+        }
+
+    .footer { 
+        position: sticky; 
+        top: 100%; 
+        }
+
+    .navbar {
+        overflow: hidden;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 150%;
+        }
+
